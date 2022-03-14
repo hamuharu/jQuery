@@ -17,15 +17,15 @@ $(function () {
             // a スライドショー全体のコンテナー
             // b 全スライドのまとまり (スライドグループ)
             // c 各スライド
-            // d ナビゲーション (Prev/Next)
-            // e インジケーター (ドット)
+            // d ナビゲーション (Prev/Next　ボタン)
+            // e インジケーター (ドット部分)
 
             slideCount = $slides.length, // スライドの点数
             indicatorHTML = '',          // インジケーターのコンテンツ
             currentIndex = 0,            // 現在のスライドのインデックス
-            duration = 500,              // 次のスライドへのアニメーションの所要時間
+            duration = 3000,              // 次のスライドへのアニメーションの所要時間
             easing = 'easeInOutExpo',    // 次のスライドへのアニメーションのイージングの種類
-            interval = 7500,             // 自動で次のスライドに移るまでの時間
+            interval = 3000,             // 自動で次のスライドに移るまでの時間
             timer;                       // タイマーの入れ物
 
 
@@ -35,7 +35,9 @@ $(function () {
         // 各スライドの位置を決定し、
         // 対応するインジケーターのアンカーを生成
         $slides.each(function (i) {
-            $(this).css({ left: 100 * i + '%' });
+            $(this).css({
+                left: 100 * i + '%'
+            });
             indicatorHTML += '<a href="#">' + (i + 1) + '</a>';
         });
 

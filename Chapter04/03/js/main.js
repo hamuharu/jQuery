@@ -13,16 +13,24 @@ $(function(){
             backgroundColor: '#faee00',
             color: '#000'
         }, duration);
-        $btn.find('img:first-child').stop(true).animate({opacity: 0}, duration);
-        $btn.find('img:nth-child(2)').stop(true).animate({opacity: 1}, duration);
+        $btn.find('img:first-child').stop().animate({
+            opacity: 0,
+        }, duration);
+        $btn.find('img:nth-child(2)').stop().animate({
+            opacity: 1,
+        }, duration)
     })
     .on('mouseout', function(){
         var $btn = $(this).stop(true).animate({
             backgroundColor: '#fff',
             color: '#01b169',
         }, duration);
-        $btn.find('img:first-child').stop(true).animate({opacity: 1}, duration);
-        $btn.find('img:nth-child(2)').stop(true).animate({opacity: 0}, duration);
+        $btn.find('img:first-child').stop(true).animate({
+            opacity: 1
+        }, duration);
+        $btn.find('img:nth-child(2)').stop(true).animate({
+            opacity: 0
+        }, duration);
     });
 
 
